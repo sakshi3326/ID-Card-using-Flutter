@@ -6,8 +6,17 @@ void main() {
      home: Card(),
   ));
 }
-class Card extends StatelessWidget {
+class Card extends StatefulWidget {
   const Card({Key? key}) : super(key: key);
+
+  @override
+  State<Card> createState() => _CardState();
+}
+
+class _CardState extends State<Card> {
+
+  int lvl = 0;
+
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +28,15 @@ class Card extends StatelessWidget {
         backgroundColor: Colors.grey[850],
         elevation: 0.0,
       ),
+       floatingActionButton: FloatingActionButton(
+         onPressed: (){
+           setState(() {
+             lvl += 1;
+           });
+         },
+         child: Icon(Icons.add),
+         backgroundColor: Colors.grey[800] ,
+       ),
        body: Padding(
          padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
          child: Column(
@@ -61,7 +79,7 @@ class Card extends StatelessWidget {
              ),
              SizedBox(height: 10.0),
              Text(
-               '8',
+               '$lvl',
                style: TextStyle(
                  color: Colors.amberAccent,
                  letterSpacing: 2.0,
@@ -94,4 +112,6 @@ class Card extends StatelessWidget {
     );
   }
 }
+
+
 
