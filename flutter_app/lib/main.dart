@@ -24,13 +24,14 @@ class Card extends StatelessWidget {
          child: Column(
            crossAxisAlignment: CrossAxisAlignment.start,
            children: <Widget>[
-             Text(
-               'NAME',
-               style: TextStyle(
-                 color: Colors.grey,
-                 letterSpacing: 2.0,
+               Text(
+                 'NAME',
+                  style: TextStyle(
+                   color: Colors.grey,
+                   letterSpacing: 2.0,
+                 ),
                ),
-             ),
+             SizedBox(height: 10.0),
              Text(
                'Sakshi Singh',
                style: TextStyle(
@@ -40,6 +41,42 @@ class Card extends StatelessWidget {
                  fontWeight: FontWeight.bold,
                ),
              ),
+             SizedBox(height: 30.0),
+             Text(
+               'Current Level',
+               style: TextStyle(
+                 color: Colors.grey,
+                 letterSpacing: 2.0,
+               ),
+             ),
+             SizedBox(height: 10.0),
+             Text(
+               '8',
+               style: TextStyle(
+                 color: Colors.amberAccent,
+                 letterSpacing: 2.0,
+                 fontSize: 25.0,
+                 fontWeight: FontWeight.bold,
+               ),
+             ),
+             SizedBox(height: 30.0),
+             Row(
+               children: <Widget>[
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+
+                ),
+                 Text(
+                   'sakshi123@gmail.com',
+                   style: TextStyle(
+                     color: Colors.grey[400],
+                     fontSize: 18.0,
+                     letterSpacing: 1.0,
+                   ),
+                 ),
+               ],
+             )
            ],
          ),
        ),
